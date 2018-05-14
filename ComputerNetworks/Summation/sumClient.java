@@ -10,13 +10,14 @@ class sumClient{
 			PrintStream out = new PrintStream(s.getOutputStream());
 
 			System.out.print("Enter space separated numbers: ");
-			String str = br.readLine();																	//Taking User Input
+			String numberString = br.readLine();																	//Taking User Input
 
-			out.println(str);																			//Sending to server
+			out.println(numberString);																			//Sending to server
 
-			str = in.readLine();																		//Getting server response
+			String sum;
+			sum = in.readLine();																		//Getting server response
 
-			System.out.println("Sum: " + str);
+			System.out.println("Sum: " + sum);
 
 			s.close();																					//Closing Socket
 		}catch(Exception e){
