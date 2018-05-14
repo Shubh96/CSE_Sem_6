@@ -1,0 +1,10 @@
+DECLARE
+	Area NUMBER;
+BEGIN
+	FOR I IN 3..7
+	LOOP
+		Area:=3.14*I*I;
+		INSERT INTO Circle_86 VALUES(I,Area);		
+	END LOOP;
+END;
+/

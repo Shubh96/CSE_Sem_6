@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON
+
+DECLARE
+	Diameter NUMBER;
+BEGIN
+	FOR I in 3..7
+	LOOP
+		UPDATE Circle_86
+		SET Diameter= 2*I
+		WHERE Radius = I;
+	END LOOP;
+END;
+/

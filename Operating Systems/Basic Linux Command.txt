@@ -1,0 +1,31 @@
+echo $SHELL: Check type of shell
+pwd: Present working directory
+ls: List
+ls -l: Long List
+ls -a: It lits all the files in the directory
+rwx: Read Write Execute. This is the list of permissions for a file to the user. There are 3 levels namely user  group	other
+chmod: Change the read write permissions of a file
+command --help: Gives a short description of the command
+.filename: Creates the filename file as hidden
+mkdir dirname: Makes a new directory named dirname
+mkdir d1 d2 d3/d31: Makes multiple directories and d3/d31 will create a directory named d31 inside d3
+cd /home/student: This type of path is called absolute path
+cd ../.. : This is called realtive path
+cd $HOME/test1: Works only for HOME directory
+cd ~/test1: Works only for HOME directory
+cal dd mm yyyy: Displays the calendar, dd and mm are optional
+cal -3 mm yyyy: Displays previous, current, next month wrt mm
+cal yyyy>>file.txt: Saves the calendar to file.txt
+cal yyyy>>prn: Sends the calendar for yyyy to print
+who: Shows the logged in users
+who am I: Currently logged in user
+uname: Shows the Operating System name
+uname -r: Shows the kernel version
+df: Shows the free space in the HDD
+df -H: Shows free space in the Hard Disk
+ps -e: List of running processess
+ps -eLf: Shows details of running threads
+kill PID: Kills the process with process ID as PID
+jobs: Shows the status of jobs
+bg job: Sends job to background
+fg job: Brings job to foreground
