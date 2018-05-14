@@ -2,15 +2,15 @@ import java.net.*;
 import java.io.*;
 import java.util.Date;
 
-class DisplayDateServer{
+class DateServer{
 	public static void main(String[] args) {
 		try{
-			ServerSocket ss = new ServerSocket(1111);
+			ServerSocket ss = new ServerSocket(2345);
 			Socket s = ss.accept();
-			Date d = new Date();
+			Date date = new Date();
 			PrintStream out = new PrintStream(s.getOutputStream());
 
-			out.println(d);
+			out.println(date);
 			s.close();
 			ss.close();
 		}catch(Exception e){

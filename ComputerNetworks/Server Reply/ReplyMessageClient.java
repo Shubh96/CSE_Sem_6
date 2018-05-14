@@ -4,7 +4,7 @@ import java.io.*;
 class ReplyMessageClient{
 	public static void main(String[] args) {
 		try{
-			Socket s = new Socket("localhost", 1111);
+			Socket s = new Socket("localhost", 2345);
 			BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
 			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 			PrintStream out = new PrintStream(s.getOutputStream());
@@ -13,9 +13,9 @@ class ReplyMessageClient{
 			String str = in.readLine();
 			out.println(str);
 
-			System.out.println("Waiting for server to send back message...");
+			System.out.println("Waiting for server reply...");
 			str = br.readLine();
-			System.out.println("Message recieved from server: " + str);
+			System.out.println("Message from server: " + str);
 
 			s.close();
 		}catch(Exception e){
@@ -23,8 +23,9 @@ class ReplyMessageClient{
 		}
 	}
 }
-/*
-Enter your message: Baka Here :D
-Waiting for server to send back message...
-Message recieved from server: Baka Here :D
+/* OUTPUT:
+
+Enter your message: Hi there
+Waiting for server reply...
+Message from server: Hi there
 */

@@ -4,18 +4,17 @@ import java.io.*;
 class lowerToUpperServer{
 	public static void main(String[] args) {
 		try{
-			ServerSocket ss = new ServerSocket(1111);
+			ServerSocket ss = new ServerSocket(2345);
 			Socket s = ss.accept();
-			BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
+			BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
 			PrintStream out = new PrintStream(s.getOutputStream());
 
-			System.out.println("Waiting for clients message...");
-			String str = br.readLine();
+			String str = in.readLine();
 
-			System.out.println("Message Recieved. Coverting to uppercase and sending...");
+			System.out.println("Converting...");
 
 			out.println(str.toUpperCase());
-			System.out.println("Done.");
+			System.out.println("Message Sent");
 
 			s.close();
 			ss.close();			
@@ -25,8 +24,8 @@ class lowerToUpperServer{
 		}
 	}
 }
-/*
-Waiting for clients message...
-Message Recieved. Coverting to uppercase and sending...
-Done.
+/* OUTPUT
+
+Converting...
+Message Sent
 */
