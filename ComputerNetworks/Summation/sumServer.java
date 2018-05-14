@@ -26,11 +26,3 @@ class sumServer{
 		}
 	}
 }
-
-/*OUTPUT:
-
-Waiting for client to send message...
-Message Received. Doing summation.
-Sending summation to client...
-Done.
-*/

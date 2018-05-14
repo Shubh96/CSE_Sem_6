@@ -28,6 +28,6 @@ class sumClient{
 
 /*OUTPUT:
 
-Enter space separated numbers: 12 11 21 7
-Sum: 51
+Enter space separated numbers: 1 2 3 4 5
+Sum: 15
 */
