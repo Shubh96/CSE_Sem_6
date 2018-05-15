@@ -19,37 +19,30 @@ public class CRCReceiver{
 
 			int[] dataDivisor = new int[divisor.length()];
 
-			for(int i = 0; i<divisor.length();i++){
-				//System.out.println(s[i]);
+			for(int i = 0; i<divisor.length();i++)
 				dataDivisor[i] = Integer.parseInt(s2[i]);
-				//System.out.print(data[i]);
-			}
 
 			String[] s = msg.split("");
 
 			int[] data = new int[msg.length()];
 
-			for(int i = 0; i<msg.length();i++){
-				//System.out.println(s[i]);
+			for(int i = 0; i<msg.length();i++)
 				data[i] = Integer.parseInt(s[i]);
-				//System.out.print(data[i]);
-			}
 
 			for(int i= 0;i<msg.length();i++){
 				if(data[i] == 1)
 					for(int j=0;j<divisor.length();j++)
 						data[i+j]^=dataDivisor[j];
 			}
-			
 
 			for(int i = 0; i<msg.length();i++){
 				if(data[i] == 1){
-					System.out.print("Error in data.");
+					System.out.print("Error exists");
 					System.exit(0);
 				}
 			}
 
-			System.out.println("No error in message. Recieved successfully.");
+			System.out.println("No error in message");
 			
 			clientSocket.close();
 			serverSocket.close();

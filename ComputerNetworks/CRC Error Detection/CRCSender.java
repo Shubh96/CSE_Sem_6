@@ -20,25 +20,13 @@ public class CRCSender{
 			int[] data = new int[msg.length()+divisor.length()-1];
 			int[] dataDivisor = new int[divisor.length()];
 
-			for(int i = 0; i<msg.length();i++){
-				//System.out.println("s:" + i + " " + s[i]);
+			for(int i = 0; i<msg.length();i++)
 				data[i] = Integer.parseInt(s[i]);
-				//System.out.print(data[i]);
-			}
-	
-			for(int i = 0; i<divisor.length();i++){
-				//System.out.println("s1:" + i + " " + s2[i]);
+			
+			for(int i = 0; i<divisor.length();i++)
 				dataDivisor[i] = Integer.parseInt(s2[i]);
-				//System.out.print(data[i]);
-			}
 
 			System.out.println();
-
-			/*
-			for(int i = 0; i<msg.length()+divisor.length()-1;i++){
-				System.out.print(data[i]);
-			}
-			*/
 
 			for(int i= 0;i<msg.length();i++){
 				if(data[i] == 1)
